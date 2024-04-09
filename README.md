@@ -14,8 +14,9 @@ You can directly run the shell below to test or use the [vit-benchmark-with-colo
 
 ```bash
 git clone https://github.com/hpcaitech/ColossalAI.git
-cp ./my_benchmark.sh /ColossalAI/examples/images/vit
-cd /ColossalAI/examples/images/vit
+cp ./my_benchmark.sh ColossalAI/examples/images/vit
+cp ./read_log.py ColossalAI/examples/images/vit
+cd ColossalAI/examples/images/vit
 bash my_benchmark.sh > log.txt 2> errors.txt
 python read_log.py
 ```
