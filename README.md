@@ -13,7 +13,7 @@ In this repo, we bench 4 boosting method in [ColossalAI](https://github.com/hpca
 You can directly run the shell below to test or use the [vit-benchmark-with-colossalai.ipynb](./vit-benchmark-with-colossalai.ipynb) to bench the speed and get visualization on Kaggle. Or you can directly visit my public Kaggle notebook. [ViT benchmark with ColossalAI (kaggle.com)](https://www.kaggle.com/code/concyclics/vit-benchmark-with-colossalai/notebook).
 
 ```bash
-https://github.com/Concyclics/ViT-Training-Benchmark-with-ColossalAI.git
+git clone https://github.com/Concyclics/ViT-Training-Benchmark-with-ColossalAI.git
 cd ViT-Training-Benchmark-with-ColossalAI
 bash my_benchmark.sh > log.txt 2> errors.txt
 python read_log.py
