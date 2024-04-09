@@ -13,33 +13,9 @@ In this repo, we bench 4 boosting method in [ColossalAI](https://github.com/hpca
 You can directly run the shell below to test or use the [vit-benchmark-with-colossalai.ipynb](./vit-benchmark-with-colossalai.ipynb) to bench the speed and get visualization on Kaggle. Or you can directly visit my public Kaggle notebook. [ViT benchmark with ColossalAI (kaggle.com)](https://www.kaggle.com/code/concyclics/vit-benchmark-with-colossalai/notebook).
 
 ```bash
-set -xe
-pip install -r requirements.txt
-
-export BS=8
-export MEMCAP=0
-export GPUNUM=2
-
-for BS in 8 16 32 64 128 256
-do
-for PLUGIN in "torch_ddp" "torch_ddp_fp16" "low_level_zero" "gemini"
-do
-for iter in {1..3} 
-do
-
-MODEL_PATH="google/vit-base-patch16-224"
-colossalai run \
-  --nproc_per_node ${GPUNUM} \
-  --master_port 29505 \
-  vit_benchmark.py \
-  --model_name_or_path ${MODEL_PATH} \
-  --mem_cap ${MEMCAP} \
-  --plugin ${PLUGIN} \
-  --batch_size ${BS}
-
-done
-done
-done
+git clone https://github.com/hpcaitech/ColossalAI.git
+cd /kaggle/working/ColossalAI/examples/images/vit
+bash my_benchmark.sh > log.txt 2> errors.txt
 ```
 
 ### Config
