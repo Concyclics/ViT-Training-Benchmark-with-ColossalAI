@@ -6,7 +6,7 @@
 
 ## Benchmark
 
-In this repo, we bench 4 boosting method in [ColossalAI](https://github.com/hpcaitech/ColossalAI) with [Kaggle](https://www.kaggle.com)'s free T4$\times$2 GPU and see the performance of different settings. Each combination of settings will be tested by 3 times.
+In this repo, we bench 4 boosting method in [ColossalAI](https://github.com/hpcaitech/ColossalAI) with [Kaggle](https://www.kaggle.com)'s free T4x2 GPU and see the performance of different settings. Each combination of settings will be tested by 3 times.
 
 ### How to run
 
@@ -65,7 +65,7 @@ done
 
 #### Hardware
 
-* Nvidia Tesla T4 $\times$ 2
+* Nvidia Tesla T4x2
 
 ### Bench result
 
